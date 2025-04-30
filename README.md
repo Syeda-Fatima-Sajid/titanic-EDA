@@ -35,9 +35,4 @@ This project performs a comprehensive Exploratory Data Analysis (EDA) on the cla
 - Matplotlib, Seaborn
 - Scikit-learn
 
-## 🚀 How to Run
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/titanic-eda.git
-   cd titanic-eda
