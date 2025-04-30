@@ -1,93 +1,52 @@
-Titanic Dataset - Exploratory Data Analysis (EDA)
+# Titanic Dataset - Exploratory Data Analysis (EDA) & Modeling
 
-This project performs a comprehensive EDA (Exploratory Data Analysis) on the Titanic dataset to uncover insights about passenger survival during the infamous disaster. The analysis involves data cleaning, visualization, feature engineering, and statistical testing.
+This project conducts an **Exploratory Data Analysis (EDA)** on the famous Titanic dataset, aiming to understand various factors influencing survival rates. After the EDA, a **Random Forest classification model** is built to predict the survival of passengers.
 
-📁 Dataset
+## 🧑‍💻 Project Overview
 
-Source: sns.load_dataset('titanic')
+The Titanic dataset provides information about passengers aboard the ill-fated RMS Titanic. The project includes:
+- Data cleaning and handling missing values
+- Visualizing data to gain insights into passenger survival
+- Feature engineering and statistical testing
+- Model building and evaluation
 
-The dataset contains demographic and travel information for passengers aboard the Titanic.
+## 📊 Conclusions from Titanic EDA
 
-🧹 Steps Performed
+1. **Overall Survival Count**
+   - The majority of passengers **did not survive** the Titanic disaster.
+   - This emphasizes the importance of passenger class, gender, and age in survival chances.
 
-Data Cleaning
+2. **Survival by Gender**
+   - **Females** had a **much higher survival rate** than males, confirming the "women and children first" evacuation policy.
 
-Dropped columns with excessive missing values (e.g., deck).
+3. **Survival by Passenger Class**
+   - Passengers in **1st class** had the highest survival rates, followed by **2nd class**, and then **3rd class**.
+   - **Socio-economic status** played a major role in survival.
 
-Imputed missing values for age, embarked, and embark_town.
+4. **Age vs Survival**
+   - **Younger passengers** had higher survival rates on average.
+   - The boxplot indicates that survivors had a lower average age than non-survivors.
 
-Visualization and EDA
+5. **Family Size vs Survival**
+   - Passengers with a **Family Size of 2–4** had higher survival rates.
+   - Passengers traveling alone or with large families had **lower survival chances**.
 
-Plotted various relationships using Seaborn and Matplotlib.
+6. **Embarkation Port**
+   - Passengers who boarded from **Cherbourg (C)** had a higher survival rate, possibly due to wealthier passengers or better access to lifeboats.
 
-Feature Engineering
+7. **Fare vs Survival (via Correlation Heatmap)**
+   - A positive correlation between **Fare** and **survival** suggests that wealthier passengers had higher chances of survival.
 
-Created a new feature FamilySize = sibsp + parch + 1.
+8. **Statistical Tests (Chi-Square and t-test)**
+   - **Chi-Square tests** revealed significant associations between survival and features like **Sex**, **Pclass**, and **FamilySize**.
+   - A **t-test** showed significant differences in **Age** between survivors and non-survivors.
 
-Statistical Testing
+9. **Model Evaluation (Confusion Matrix & ROC Curve)**
+   - The **Random Forest model** demonstrated a reasonable **ROC AUC score**, suggesting good predictive ability.
 
-Applied Chi-Square tests for categorical variables.
+## 🛠️ Technologies Used
 
-Used t-tests for numerical feature comparison (e.g., age).
-
-Correlation and Encoding
-
-One-hot encoded categorical features.
-
-Visualized the correlation heatmap.
-
-Model Evaluation
-
-Trained a Random Forest Classifier and evaluated it using ROC and Confusion Matrix.
-
-📊 Key Conclusions
-
-Overall Survival
-
-Most passengers did not survive.
-
-Gender vs Survival
-
-Females had a much higher survival rate than males.
-
-Class vs Survival
-
-First class passengers were most likely to survive.
-
-Age vs Survival
-
-Younger passengers had a higher chance of survival.
-
-Family Size
-
-Medium-sized families (2–4 people) had better survival rates.
-
-Embarkation Port
-
-Passengers from Cherbourg showed higher survival rates.
-
-Fare vs Survival
-
-Higher fare correlated positively with survival.
-
-Statistical Significance
-
-Features like sex, pclass, and FamilySize showed significant associations with survival.
-
-Model Metrics
-
-ROC curve and confusion matrix validated the predictive quality of selected features.
-
-📌 Tools & Libraries
-
-Python
-
-Pandas
-
-Seaborn
-
-Matplotlib
-
-Scikit-learn
-
-SciPy
+- **Python** (Jupyter Notebook)
+- **Pandas**, **NumPy**
+- **Matplotlib**, **Seaborn** for visualizations
+- **Scikit-learn** for machine learning models and evaluation
